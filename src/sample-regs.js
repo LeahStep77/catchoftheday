@@ -1,9 +1,9 @@
 // This is just some sample data so you don't have to think of your own!
-const fishes = {
+const regs = {
   fish1: {
     name: 'Pacific Halibut',
     image: 'https://i.istockimg.com/file_thumbview_approve/36248396/5/stock-photo-36248396-blackened-cajun-sea-bass.jpg',
-    desc: 'Everyones favorite white fish. We will cut it to the size you need and ship it.',
+    desc: 'Everyones favorite white reg. We will cut it to the size you need and ship it.',
     price: 1724,
     status: 'available'
   },
@@ -42,7 +42,7 @@ const fishes = {
 
   fish6: {
     name: 'Atlantic Salmon',
-    image: 'https://i.istockimg.com/file_thumbview_approve/56241842/5/stock-photo-56241842-salmon-fish.jpg',
+    image: 'https://i.istockimg.com/file_thumbview_approve/56241842/5/stock-photo-56241842-salmon-reg.jpg',
     desc: 'This flaky, oily salmon is truly the king of the sea. Bake it, grill it, broil it...as good as it gets!',
     price: 1453,
     status: 'available'
@@ -73,4 +73,4 @@ const fishes = {
   }
 };
 
-export default fishes;
+export default regs;

@@ -1,32 +1,32 @@
 import  React from "react";
 import  Header from "./Header";
 import  Order from "./Order";
-import  Inventory from "./Inventory";
-import  Fish from "./Fish";
-import sampleFishes from '../sample-fishes';
+import  Attendees from "./Attendees";
+import  Reg from "./Reg";
+import sampleReges from '../sample-regs';
 import Display from "./Display"
 
 
 class App extends React.Component{
   constructor(){
     super();
-    this.addFish = this.addFish.bind(this);
+    this.addReg = this.addReg.bind(this);
     this.loadSamples = this.loadSamples.bind(this);
     this.state = {
-      fishes: {},
+      regs: {},
       order: {}
     };
   }
-  addFish(fish){
-    const fishes = {...this.state.fishes};
+  addReg(reg){
+    const regs = {...this.state.regs};
     const timestamp = Date.now();
-    fishes[`fish-${timestamp}`] = fish;
-    this.setState({ fishes: fishes });
+    regs[`reg-${timestamp}`] = reg;
+    this.setState({ regs: regs });
   }
 
   loadSamples(){
     this.setState({
-      fishes: sampleFishes
+      regs: sampleReges
     });
   }
 
@@ -35,22 +35,22 @@ class App extends React.Component{
         <div>
         <div>
         <Display />
-         <Inventory addFish={this.addFish} loadSamples={this.loadSamples} />
+         <Attendees addReg={this.addReg} loadSamples={this.loadSamples} />
          </div>
-        
-        <div className="catch-of-the-day">
+
+        <div className="landing-page">
           <div className="menu">
             <Header tagline="" />
-            <ul className="list-of-fishes">
+            <ul className="list-of-regs">
               {
             Object
-            .keys(this.state.fishes)
-            .map(key => <Fish key={key} details={this.state.fishes[key]} />)
+            .keys(this.state.regs)
+            .map(key => <Reg key={key} details={this.state.regs[key]} />)
               }
             </ul>
           </div>
           <Order />
-        
+
         </div>
 
         </div>
